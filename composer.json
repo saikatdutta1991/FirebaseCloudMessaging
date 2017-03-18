@@ -1,6 +1,6 @@
 {
     "name": "saikatdutta1991/firebasecloudmessaging",
-    "description": "This is to send push notification with firebase cloud messaging. This library can be used with laravel. Tested in Laravel 5.2.*",
+    "description": "This is to send push notification with firebase cloud messaging for Laravel. Tested in Laravel 5.2.*",
     "keywords": ["firebasecloudmessaging", "composer", "package", "laravel", "push notification", "cloud messaging", "firebase", "gcm", "fcm"],
     "authors": [
         {
