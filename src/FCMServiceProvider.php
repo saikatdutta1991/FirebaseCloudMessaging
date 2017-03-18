@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Providers;
+namespace Saikat\FirebaseCloudMessaging;
 
 use Illuminate\Support\ServiceProvider;
 
@@ -14,7 +14,7 @@ class FCMServiceProvider extends ServiceProvider
      */
     public function boot()
     {
-        
+    
     }
 
     /**
