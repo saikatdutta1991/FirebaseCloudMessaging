@@ -8,6 +8,7 @@
             "email": "saikatdutta1991@gmail.com"
         }
     ],
+    "type": "library",
     "minimum-stability": "dev",
     "psr-4": { 
         "Saikat\\FirebaseCloudMessaging\\": "src/" 
