@@ -16,7 +16,10 @@
         }
     },
     "scripts": {
-        "post-install-cmd": [
+        "post-package-update": [
+            "Saikat\\FirebaseCloudMessaging\\PostInstallEventHandler::copyConfig"
+        ],
+        "post-package-install": [
             "Saikat\\FirebaseCloudMessaging\\PostInstallEventHandler::copyConfig"
         ]
     }
