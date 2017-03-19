@@ -148,3 +148,39 @@ class Controller extends Controller
 
 }
 ```
+
+
+To change response 
+-----------
+
+```php
+->push(PushManager::STDCLASS)
+```
+
+`PushManager::STDCLASS`, `PushManager::ARRY`, `PushManager::RAW`
+
+by default response is `PushManager::RAW` set
+
+
+
+# Error Handle
+===============
+
+```php
+```
+$this->pushManager->getLastErrorCode() //if no error then 0
+```
+and 
+```php
+$this->pushManager->getLastErrorMessage() // if no error then ""
+``` 
+
+
+# Future Enhancement
+======================
+
+Now only raw response works proper. Json and stdClas response doesn't work for all types of fcm response. Returns null if failed to make json decode.
+
+
+I will make the send push notification send asynchronous so that no wait for the response
+
