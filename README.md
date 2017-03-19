@@ -15,6 +15,15 @@ php composer.phar require --dev saikatdutta1991/firebasecloudmessaging:1.0.0
 
 add the service provider 
 ```php 
-\Saikat\FirebaseCloudMessaging\FCMServiceProvider::class 
+
+ 'providers' => [
+
+        /*
+         * Laravel Framework Service Providers...
+         */
+            
+        .....
+        .....
+        \Saikat\FirebaseCloudMessaging\FCMServiceProvider::class 
 ``` 
 to `config\app.php` providers array  
