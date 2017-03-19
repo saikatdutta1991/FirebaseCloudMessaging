@@ -16,8 +16,8 @@
         }
     },
     "scripts": {
-        "post-update-cmd": [
-            "php artisan vendor:publish --tag=\"config\""
+        "post-install-cmd": [
+            "Saikat\\FirebaseCloudMessaging\\PostInstallEventHandler::copyConfig"
         ]
     }
     
