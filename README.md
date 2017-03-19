@@ -42,8 +42,17 @@ Alias the PushManager class adding it to the aliases array in the `config/app.ph
 But the alias is not mandatory.
 
 
+# Configuration
+publish the package config to your laravel config folder with executing command
 
-#Usage
+```json
+php artisan vendor:publish --tag="config"
+```
+
+before executing this command add the service provider first
+
+
+# Usage
 -----------
 
 
