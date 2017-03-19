@@ -15,10 +15,10 @@
             "Saikat\\FirebaseCloudMessaging\\": "src/" 
         }
     },
-    "extra": {
-        "copy-file": {
-            "vendor/saikatdutta1991/FirebaseCloudMessaging/config": "config"
-        }
+    "scripts": {
+        "post-update-cmd": [
+            "php -r \"copy('vendor/saikatdutta1991/firebasecloudmessaging/src/config/firebase_cloud_messaging.php', 'config/firebase_cloud_messaging.php');\""
+        ]
     }
     
 }
