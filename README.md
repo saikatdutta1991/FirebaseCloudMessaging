@@ -62,6 +62,8 @@ add the fcm `server_key` in the `config/firebase_cloud_messaging.php` file
 
 ```
 
+`fcm_push_url` is not required already included in package. If want to override then add it
+
 
 # Usage
 -----------
