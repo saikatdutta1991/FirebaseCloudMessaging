@@ -59,3 +59,31 @@ IF not added in alias then use it in controller
 ```php
 use Saikat\FirebaseCloudMessaging\PushManager;
 ```
+
+
+
+##dependency injection in controller constructor
+-----------------------------
+
+```php
+class YourController extends Controller
+{
+    
+    public function __construct(PushManager $pushManager)
+    {
+        $this->pushManager = $pushManager;
+    }
+```
+
+
+
+If want to use without injecting then
+```php
+class YourController extends Controller
+{
+    
+    public function sendPushNotification()
+    {
+        $pushManager = app('PushManager'); // this will keep the PushManager instance singleton
+    }
+```
