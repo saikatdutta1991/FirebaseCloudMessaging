@@ -1,6 +1,6 @@
 <?php
 
-namespace Saikat\FirebaseCloudMessaging;
+namespace Saikat;
 
 use ComposerScriptEvent;
 
