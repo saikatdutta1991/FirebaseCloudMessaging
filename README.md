@@ -9,7 +9,7 @@ This Package is to enable sending push notifications to devices with firebase cl
 To install the package simply run this command in Laravel project root folder
 
 ```php
-php composer.phar require --dev saikatdutta1991/firebasecloudmessaging:1.0.0
+php composer.phar require saikatdutta1991/firebasecloudmessaging:1.0.0
 ```
 
 
@@ -119,67 +119,4 @@ class YourController extends Controller
 
 namespace App\Http\Controllers;
 
-use Illuminate\Routing\Controller;
-use PushManager;
-
-class Controller extends Controller
-{
-    
-    public function __construct(PushManager $pushManager)
-    {
-        $this->pushManager = $pushManager;
-    }
-
-    public function sendPushNotification()
-    {
-        $response = $this->pushManager
-            ->setTitle('Test Title')
-            ->setBody('Test Body')
-            ->setIcon('icon url')
-            ->setClickAction('https://www.google.com')
-            ->setCustomPayload(['custom_data' => 'custom_data_array']) 
-            ->setPriority(PushNotification::HIGH)
-            ->setContentAvailable(true)
-            ->setDeviceTokens('--------------------') // this can be an array or string
-            ->push();
-
-        dd( $response );
-    }
-
-}
-```
-
-
-To change response 
------------
-
-```php
-->push(PushManager::STDCLASS)
-```
-
-`PushManager::STDCLASS`, `PushManager::ARRY`, `PushManager::RAW` constants
-
-by default response is `PushManager::RAW` set
-
-
-
-# Error Handle
-===============
-
-```php
-$this->pushManager->getLastErrorCode() //if no error then 0
-```
-and 
-```php
-$this->pushManager->getLastErrorMessage() // if no error then ""
-``` 
-
-
-# Future Enhancement
-======================
-
-Now only raw response works proper. Json and stdClas response doesn't work for all types of fcm response. Returns null if failed to make json decode.
-
-
-I will make the send push notification send asynchronous so that no wait for the response
-
+use Illu
