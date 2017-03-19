@@ -51,6 +51,17 @@ php artisan vendor:publish --tag="config"
 
 before executing this command add the service provider first
 
+add the fcm `server_key` in the `config/firebase_cloud_messaging.php` file
+```php 
+    return [
+        
+        "server_key" => env('FIREBASE_CLOUD_MESSAGING_SERVER_KEY'),
+        "fcm_push_url" => env("FIREBASE_CLOUD_MESSAING_URL")
+
+    ];
+
+```
+
 
 # Usage
 -----------
