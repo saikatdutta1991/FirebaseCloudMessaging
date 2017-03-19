@@ -109,3 +109,42 @@ class YourController extends Controller
         $pushManager = app('PushManager'); // this will keep the PushManager instance singleton
     }
 ```
+
+
+
+# Example
+
+```php
+<?php
+
+namespace App\Http\Controllers;
+
+use Illuminate\Routing\Controller;
+use PushManager;
+
+class Controller extends Controller
+{
+    
+    public function __construct(PushManager $pushManager)
+    {
+        $this->pushManager = $pushManager;
+    }
+
+    public function sendPushNotification()
+    {
+        $response = $this->pushManager
+            ->setTitle('Test Title')
+            ->setBody('Test Body')
+            ->setIcon('icon url')
+            ->setClickAction('https://www.google.com')
+            ->setCustomPayload(['custom_data' => 'custom_data_array']) 
+            ->setPriority(PushNotification::HIGH)
+            ->setContentAvailable(true)
+            ->setDeviceTokens('--------------------') // this can be an array or string
+            ->push();
+
+        dd( $response );
+    }
+
+}
+```
