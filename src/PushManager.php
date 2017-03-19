@@ -154,6 +154,14 @@ class PushManager
 	}
 
 
+	/* returns push manager instance (this class instance for facades) */
+	public static function getPushManager()
+	{
+		return app('PushManager');
+	}
+	
+
+
 	public function setPriority($priority)
 	{
 		$this->priority = $priority;
