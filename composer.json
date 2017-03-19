@@ -17,7 +17,7 @@
     },
     "scripts": {
         "post-update-cmd": [
-            "php -r \"copy('vendor/saikatdutta1991/firebasecloudmessaging/src/config/firebase_cloud_messaging.php', 'config/firebase_cloud_messaging.php');\""
+            "php artisan vendor:publish --tag=\"config\""
         ]
     }
     

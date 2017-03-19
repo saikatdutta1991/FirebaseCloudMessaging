@@ -29,6 +29,12 @@ class FCMServiceProvider extends ServiceProvider
             return new \Saikat\FirebaseCloudMessaging\PushManager;
         });
 
+
+        /* publish config file */
+        $this->publishes([
+            __DIR__.'/config/firebase_cloud_messaging.php' => config_path('firebase_cloud_messaging.php')
+        ], 'config');
+
     }
 
 
