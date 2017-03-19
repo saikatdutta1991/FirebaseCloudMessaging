@@ -157,7 +157,7 @@ To change response
 ->push(PushManager::STDCLASS)
 ```
 
-`PushManager::STDCLASS`, `PushManager::ARRY`, `PushManager::RAW`
+`PushManager::STDCLASS`, `PushManager::ARRY`, `PushManager::RAW` constants
 
 by default response is `PushManager::RAW` set
 
@@ -167,7 +167,6 @@ by default response is `PushManager::RAW` set
 ===============
 
 ```php
-```
 $this->pushManager->getLastErrorCode() //if no error then 0
 ```
 and 
