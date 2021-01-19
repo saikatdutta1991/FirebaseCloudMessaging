@@ -1,5 +1,6 @@
 Firebase Cloud Messaging
 =========
+** Caveat: This package is not maintained anymore.
 
 This Package is to enable sending push notifications to devices with firebase cloud messaging. Tested in Laravel 5.1 and 5.2
 
